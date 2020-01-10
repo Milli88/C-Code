@@ -17,22 +17,25 @@ namespace GuessANumber
         {
             int ourNumber = 20;
             int guessedNumber = 0;
-           
 
-            while (guessedNumber != ourNumber)
+            for (int n = 20; n > 0; n--)
             {
-                guessedNumber =guessHere();
-                if (guessedNumber == ourNumber)
+                while (guessedNumber != ourNumber)
                 {
-                    Console.WriteLine("Your got it");
-                }
-                else if (guessedNumber >= 20)
-                {
-                    Console.WriteLine("Your guess is to high");
-                }
-                else if (guessedNumber <= 9)
-                {
-                    Console.WriteLine("Your guess is too low");
+                    guessedNumber = guessHere();
+                    if (guessedNumber == ourNumber)
+                    {
+                        Console.WriteLine("Your got it");
+                        break;
+                    }
+                    else if (guessedNumber >= 20)
+                    {
+                        Console.WriteLine("Your guess is to high");
+                    }
+                    else if (guessedNumber <= 9)
+                    {
+                        Console.WriteLine("Your guess is too low");
+                    }
                 }
             }
 
