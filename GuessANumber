@@ -1,0 +1,41 @@
+using System;
+
+namespace GuessANumber
+{
+    class Program
+    {
+
+        static int guessHere()
+        {
+            Console.WriteLine("Please Enter your Guess");
+            string answer = Console.ReadLine();
+            int guess = 0;
+            Int32.TryParse(answer, out guess);
+            return guess;
+        }
+        static void Main(string[] args)
+        {
+            int ourNumber = 20;
+            int guessedNumber = 0;
+           
+
+            while (guessedNumber != ourNumber)
+            {
+                guessedNumber =guessHere();
+                if (guessedNumber == ourNumber)
+                {
+                    Console.WriteLine("Your got it");
+                }
+                else if (guessedNumber >= 20)
+                {
+                    Console.WriteLine("Your guess is to high");
+                }
+                else if (guessedNumber <= 9)
+                {
+                    Console.WriteLine("Your guess is too low");
+                }
+            }
+
+        }
+    }
+}
