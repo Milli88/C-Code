@@ -1,0 +1,50 @@
+using System;
+
+namespace GuessANumber
+{
+    class Program
+    {
+
+       
+        static void Main(string[] args)
+        {
+            PetStruct dog;
+            dog.Legs = 4;
+            dog.Name = "Pluto";
+            dog.HasFur = true;
+
+
+
+            PetClass duck = new PetClass();
+            {
+                duck.HasFur = true;
+                duck.Legs = 2;
+                duck.Name = "Donald";
+            }
+
+            Console.WriteLine($" A dog has {dog.Legs} legs");
+            Console.WriteLine($"A duck has {duck.Legs} legs");
+            Console.ReadLine();
+        }
+
+        }
+        
+        class PetClass
+    {
+        public int Legs;
+        public string Type;
+        public string Name;
+        public bool HasFur;
+    }
+
+        struct PetStruct
+    {
+        public int Legs;
+        public string Type;
+        public string Name;
+        public bool HasFur;
+    }
+
+}
+
+
