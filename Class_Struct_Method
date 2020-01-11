@@ -1,0 +1,60 @@
+using System;
+
+namespace GuessANumber
+{
+    class Program
+    {
+        static void MultiplyLegs(PetClass petClass, PetStruct petStruct)
+        {
+            petClass.Legs = petClass.Legs * 2;
+            petStruct.Legs = petStruct.Legs * 2;
+            Console.WriteLine("Now the duck has " + petClass.Legs);
+            Console.WriteLine("Now the dog has " + petStruct.Legs);
+        }
+       
+        static void Main(string[] args)
+        {
+            PetStruct dog = new PetStruct();
+            dog.Legs = 4;
+            dog.Name = "Pluto";
+            dog.HasFur = true;
+
+
+
+            PetClass duck = new PetClass();
+            {
+                duck.HasFur = true;
+                duck.Legs = 2;
+                duck.Name = "Donald";
+            }
+
+            Console.WriteLine($" A dog has {dog.Legs} legs");
+            Console.WriteLine($"A duck has {duck.Legs} legs");
+
+            MultiplyLegs(duck, dog);
+
+
+            Console.ReadLine();
+        }
+
+        }
+        
+        class PetClass
+    {
+        public int Legs;
+        public string Type;
+        public string Name;
+        public bool HasFur;
+    }
+
+        struct PetStruct
+    {
+        public int Legs;
+        public string Type;
+        public string Name;
+        public bool HasFur;
+    }
+
+}
+
+
