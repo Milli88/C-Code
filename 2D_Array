@@ -6,10 +6,12 @@ namespace userDefinedTypes
     {
         static void Main(string[] args)
         {
-            //  [Column, Elememts]
+            //  [Row, Column]
             // int[, ] TwoArray = new int[3,3];
 
-            int[,] TwoArray = { { 1, 2, 3 }, { 2, 3, 4 }, { 0, 1, 2 } };
+            int[,] TwoArray = { { 1, 2, 3 },
+                                { 2, 3, 4 },
+                                { 0, 1, 2 } };
 
             for (int i = 0; i < 2; i++)
 
