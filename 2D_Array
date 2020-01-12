@@ -1,0 +1,29 @@
+using System;
+
+namespace userDefinedTypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //  [Column, Elememts]
+            // int[, ] TwoArray = new int[3,3];
+
+            int[,] TwoArray = { { 1, 2, 3 }, { 2, 3, 4 }, { 0, 1, 2 } };
+
+            for (int i = 0; i < 2; i++)
+
+                for (int j = 0; j < 3; j++)
+
+                    Console.WriteLine($"Element [{ i },{ j }] is { TwoArray[i, j] }");
+
+            // Console.WriteLine($" [ {TwoArray[i, j]} ]");
+            // Console.WriteLine(i);
+            //  Console.WriteLine(arrr);
+                       Console.ReadLine();
+                    
+            
+            
+        }
+    }
+}
