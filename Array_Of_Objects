@@ -1,0 +1,28 @@
+using System;
+
+namespace userDefinedTypes
+{
+    class Program
+    {
+        class Myclass {
+          public int Myfield = 0;
+        }
+       
+        static void Main(string[] args)
+        {
+            Myclass[] mcarrary = new Myclass[4];
+            for (int i = 0; i < 4; i++){
+
+                mcarrary[i] = new Myclass();
+                mcarrary[i].Myfield = i;
+            }
+            
+            foreach(Myclass item in mcarrary)
+            {
+                Console.WriteLine(item.Myfield);
+            }
+          
+            Console.ReadLine();
+        }
+    }
+}
