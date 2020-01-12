@@ -1,0 +1,49 @@
+using System;
+
+namespace MorePractice
+{
+    class Program
+    {
+        public class Solution
+        {
+            public double FindMedianSortedArrays(int[] nums1, int[] nums2)
+            {
+                int [] Num1 = nums1;
+                int[] Num2 = nums2;
+
+
+                int total = 0;
+                int total2 = 0;
+
+                int divisor = Num1.Length + Num2.Length;
+
+                foreach (int item in Num1)
+                {
+                    total += item;
+                }
+
+                foreach (int item in Num2)
+                {
+                    total2 += item;
+                }
+
+                int med1 = total + total2;
+                double med2 = med1 / divisor;
+
+                return med2;
+            }
+        }
+        static void Main(string[] args)
+        {
+            int[] nums1 = { 2, 3 };
+            int[] nums2 = { 1, 3 };
+
+            Solution Findme = new Solution();
+           double hey = Findme.FindMedianSortedArrays(nums1, nums2);
+
+            Console.WriteLine(hey);
+            Console.ReadLine();
+
+        }
+    }
+}
