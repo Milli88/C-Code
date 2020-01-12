@@ -22,6 +22,11 @@ namespace userDefinedTypes
                 Console.WriteLine(item.Myfield);
             }
           
+            foreach (Myclass item in mcarrary)
+            {
+                item.Myfield = +10;
+            }
+            
             Console.ReadLine();
         }
     }
