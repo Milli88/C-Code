@@ -9,30 +9,31 @@ namespace MorePractice
             public double FindMedianSortedArrays(int[] nums1, int[] nums2)
             {
                 int [] Num1 = nums1;
-                int[] Num2 = nums2;
+                int [] Num2 = nums2;
 
 
-                int total = 0;
-                int total2 = 0;
+                double total = 0;
+                double total2 = 0;
 
-                int divisor = Num1.Length + Num2.Length;
+                double divisor = Num1.Length + Num2.Length;
 
-                foreach (int item in Num1)
+                foreach (double item in Num1)
                 {
-                    total += item;
+                    total += Convert.ToDouble(item);
                 }
 
-                foreach (int item in Num2)
+                foreach (double item in Num2)
                 {
-                    total2 += item;
+                    total2 += Convert.ToDouble(item);
                 }
 
-                int med1 = total + total2;
+                double med1 = total + total2;
                 double med2 = med1 / divisor;
 
                 return med2;
             }
         }
+
         static void Main(string[] args)
         {
             int[] nums1 = { 2, 3 };
